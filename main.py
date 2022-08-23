@@ -201,9 +201,9 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
             elif value["name"] == '阳阳':
                 birthday_data = "阳阳宝宝的生日只有{}天啦！悦悦要记得准备礼物哦！".format(birth_day)
             else:
-                birthday_data = "{}宝宝的生日只有{}天啦！".format(value["name"], birth_day)
+                birthday_data = "{}的生日只有{}天啦！".format(value["name"], birth_day)
         else:
-            birthday_data = "{}宝宝的生日还有{}天哦！".format(value["name"], birth_day)
+            birthday_data = "{}的生日还有{}天哦！".format(value["name"], birth_day)
         # 将生日数据插入data
         data["data"][key] = {"value": birthday_data, "color": get_color()}
     headers = {
